@@ -18,7 +18,6 @@ Built entirely through NOXMFD's public extension API (`NOXMFD.Api`, see [`EXTENS
 ## Table of contents
 
 - [Features](#features)
-- [What's here](#whats-here)
 - [Using the page](#using-the-page)
 - [Configuration](#configuration)
 - [Building](#building)
@@ -36,17 +35,6 @@ Built entirely through NOXMFD's public extension API (`NOXMFD.Api`, see [`EXTENS
 - **RC commands** — aim drag, TAKE / RELEASE, throttle nudge, **AB click-toggle**, formation, vision cycle, manual detonate (hold), missile pool picker.
 - **Telemetry overlay** — speed, alt, range, fuel, guidance, TTI; CombatHUD unit markers with configurable name labels (via MC bridge cfg).
 - **Tab isolation** — MJPEG pauses when you leave the MISSILE CAMERA page so RC does not leak onto MAP / WPN / other NOXMFD tabs.
-
----
-
-## What's here
-
-Mirrors NOXMFD's own `src/plugin` + `src/web` split.
-
-- `src/plugin/Plugin.cs`, `MissileCameraLifecycle.cs`, `MissileCameraCommands.cs`, `MissileCameraTelemetry.cs`, `MissileCameraAssets.cs` — BepInEx plugin.
-- `src/plugin/McBridge.cs`, `RcBridge.cs`, `RcFeed.cs` — reflection soft-deps on MissileCamera and MissileCamera Remote Control (neither mod references this extension).
-- `src/web/missile-camera.html`, `missile-camera.css`, `missile-camera.js` — MFD page UI; commands POST to `/ext/rc-missile-camera/command`.
-- `lib/NOXMFD.dll` — compile-time reference only (not shipped to players).
 
 ---
 
